@@ -24,7 +24,7 @@ class script(object):
 <b>✮ database: Apne Ghar pe store hai sare</b>
 <b>✮ Bot server: Ghar pe host hai</b>
 
-<b>✮ Telegram Channel: <a href=https://youtube.com/channel/UCqts9WhhlioK3RB9XQQzoAg>ᎯℕUℛᎯᎶ</a></b>"""
+<b>✮ Telegram Channel: <a href=https://t.me/Movies_Unloaded2</a></b>"""
     SOURCE_TXT = """<b>NOTE:</b>
 
 Source - Kya Karega Bro Khud bana ek new bot
@@ -33,7 +33,7 @@ Source - Kya Karega Bro Khud bana ek new bot
 - <a href=https://t.me/Movies_Unloaded2>@Movies_Unloaded2</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and ᎯℕUℛᎯᎶ will respond whenever a keyword is found the message
+- Filter is the feature were users can set automated replies for a particular keyword.
 
 <b>NOTE:</b>
 1. only admins can add filters in a chat.
@@ -46,15 +46,15 @@ Source - Kya Karega Bro Khud bana ek new bot
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- ᎯℕUℛᎯᎶ Supports both url and alert inline buttons.
+- Supports both url and alert inline buttons.
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. ᎯℕUℛᎯᎶ supports buttons with any telegram media type.
+2. Supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/Am_RoBots)</code>
+<code>[UPDATE](buttonurl:https://t.me/Movies_Unloaded2)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
