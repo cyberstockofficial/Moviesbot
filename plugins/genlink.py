@@ -34,7 +34,7 @@ async def gen_link_s(bot, message):
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"<b>⪼ Here Is Your Link:</b>\nhttps://telegram.me/{temp.U_NAME}?start={outstr}")
+    await message.reply(f"<b>⪼ Here Is Your Link:</b>\nhttps://telegram.me/{temp.U_NAME}?start={outstr}\n\n MAKE SURE YOU JOIN @Cyberstoclofficial")
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
@@ -122,4 +122,4 @@ async def gen_link_batch(bot, message):
     post = await bot.send_document(LOG_CHANNEL, f"batchmode_{message.from_user.id}.json", file_name="Batch.json", caption="👩🏻‍💻 File Store Logs 👩🏻‍💻")
     os.remove(f"batchmode_{message.from_user.id}.json")
     file_id, ref = unpack_new_file_id(post.document.file_id)
-    await sts.edit(f"<b>⪼ 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚈𝙾𝚄𝚁 𝙻𝙸𝙽𝙺\n𝙲𝙾𝙽𝚃𝙰𝙸𝙽𝚂 `{og_msg}` Files.\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>")
+    await sts.edit(f"<b>⪼ Here us your link🔗 \nContains `{og_msg}` Files.\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>")
