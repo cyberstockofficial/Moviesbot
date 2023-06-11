@@ -34,7 +34,7 @@ async def gen_link_s(bot, message):
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"<b>⪼ Here Is Your Link:</b>\n<code>https://telegram.me/{temp.U_NAME}?start={outstr}</code>\n\n**🤗 MAKE SURE YOU JOIN @Cyberstockofficial\nThis Channel will Help You To Find Best Course In Marke, Free of Cost**")
+    await message.reply(f"<b>⪼ Here Is Your Link:</b>\n<code>https://telegram.me/{temp.U_NAME}?start={outstr}</code>\n\n**🤗 MAKE SURE YOU JOIN @Cyberstockofficial**")
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
