@@ -21,8 +21,8 @@ async def addconnection(client, message):
         except:
             await message.reply_text(
                 "<b>ENTER IN CORRECT FORMATE!</b>\n\n"
-                "<code>/connect 𝙶𝚁𝙾𝚄𝙿 𝙸𝙳</code>\n\n"
-                "<i>Get your Group id by adding this bot to your group and use  <code>/id</code></i>",
+                "<code>/connect GROUP ID </code>\n\n"
+                "<i>Get your Group id by adding this bot to your group and use <code>/id</code></i>",
                 quote=True
             )
             return
@@ -56,7 +56,7 @@ async def addconnection(client, message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"😎 SUCCESSFULLY CONNECTED **{title}**\nNOW YOU CAN MANAGE YOUR GROUP FROM HERE 😘",
+                    f"**😎 SUCCESSFULLY CONNECTED **{title}**\nNOW YOU CAN MANAGE YOUR GROUP FROM HERE 😘**",
                     quote=True,
                     parse_mode=enums.ParseMode.MARKDOWN
                 )
