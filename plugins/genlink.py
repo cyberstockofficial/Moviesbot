@@ -24,17 +24,17 @@ async def allowed(_, __, message):
 async def gen_link_s(bot, message):
     replied = message.reply_to_message
     if not replied:
-        return await message.reply(' Reply to a massage or a file so that i can generate shareable link for you')
+        return await message.reply(' **Reply to a massage or a file so that i can generate shareable link for you\m\nIf You Want Use This Bot For You Channel With URL Shortener Then Use Cyberurl.me\nThis Shortener Is maintain By Cyber Stock Team**')
     file_type = replied.media
     if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT]:
-        return await message.reply("Please Reply To A Suppored Media Files")
+        return await message.reply("**Please Reply To A Suppored Media Files**")
     if message.has_protected_content and message.chat.id not in ADMINS:
         return await message.reply("𝙾𝙺 𝙱𝚁𝙾")
     file_id, ref = unpack_new_file_id((getattr(replied, file_type.value)).file_id)
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"<b>⪼ Here Is Your Link:</b>\nhttps://telegram.me/{temp.U_NAME}?start={outstr}\n\n MAKE SURE YOU JOIN @Cyberstoclofficial")
+    await message.reply(f"<b>⪼ Here Is Your Link:</b>\n<code>https://telegram.me/{temp.U_NAME}?start={outstr}</code>\n\n MAKE SURE YOU JOIN @Cyberstoclofficial")
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
@@ -79,7 +79,7 @@ async def gen_link_batch(bot, message):
         b_64 = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
         return await sts.edit(f"<b>⪼ 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚈𝙾𝚄𝚁 𝙻𝙸𝙽𝙺 ›› https://t.me/{temp.U_NAME}?start=DSTORE-{b_64}</b>")
 
-    FRMT = "<b>╭━━━━━━━━━━━━━━━➣\n┣⪼Generating Link 🔗...\n┣⪼🔍 Total Massage: `{total}`\n┣⪼� ✅ Done: `{current}`\n┣⪼⏳Remaining: `{rem}`\n┣⪼ 🕵️ Status: `{sts}`\n╰━━━━━━━━━━━━━━━➣</b>"
+    FRMT = "<b>╭━━━━━━━━━━━━━━━➣\n┣⪼🔗 Generating Link 🔗...\n┣⪼🔍 Total Massage: `{total}`\n┣⪼�✅ Done: `{current}`\n┣⪼⏳ Remaining: `{rem}`\n┣⪼🕵️ Status: `{sts}`\n╰━━━━━━━━━━━━━━━➣</b>"
 
     outlist = []
 
@@ -122,4 +122,4 @@ async def gen_link_batch(bot, message):
     post = await bot.send_document(LOG_CHANNEL, f"batchmode_{message.from_user.id}.json", file_name="Batch.json", caption="👩🏻‍💻 File Store Logs 👩🏻‍💻")
     os.remove(f"batchmode_{message.from_user.id}.json")
     file_id, ref = unpack_new_file_id(post.document.file_id)
-    await sts.edit(f"<b>⪼ Here us your link🔗 \nContains `{og_msg}` Files.\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>")
+    await sts.edit(f"<b>⪼Here us your link 🔗 \nContains `{og_msg}` Files.</b>\n <code>https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</code></b>")
