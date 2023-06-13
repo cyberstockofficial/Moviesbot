@@ -37,7 +37,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('How To Use Me', url=f"https://t.me/{temp.U_NAME}?start=help"),
             InlineKeyboardButton('📢 Download Courses 📢', url='https://cyberstockofficial.in/')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
@@ -55,7 +55,7 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/de227abf4b6e11ac1ce22.mp4",                                               
-                                                 caption=f'<b>HEY, {u.mention} 👋🏻\nWELCOME TO OUR GROUP{message.chat.title}\n\nYOU CAN SEARCH MOVIES/SERIES/ANIMES ETC... FROM HERE😉.\n\n<b>┏≫ FOLLOW GROUP RULES</b>\n┣ <b>MAIN CHANNEL›› @Movies_Unloaded2</b></code>\n<b>┗≫ FOLLOW GROUPS RULES</b>',
+                                                 caption=f'<b>HEY, {u.mention} 👋🏻\n** WELCOME TO OUR GROUP {message.chat.title}\n\nYOU CAN SEARCH MOVIES/SERIES/ANIMES ETC... FROM HERE😉.**\n\n<b>┏≫ FOLLOW GROUP RULES</b>\n┣ <b>MAIN CHANNEL›› @Movies_Unloaded2</b></code>\n<b>┗≫ Rules</b>',
                                                  reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️UPDATE CHANNEL⬅️', url='https://t.me/Movies_Unloaded2') ] ] )
                 )
 
