@@ -56,7 +56,7 @@ async def save_group(bot, message):
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/de227abf4b6e11ac1ce22.mp4",                                               
                                                  caption=f'<b>HEY, {u.mention} 👋🏻\n** WELCOME TO OUR GROUP {message.chat.title}\n\nYOU CAN SEARCH MOVIES/SERIES/ANIMES ETC... FROM HERE😉.**\n\n<b>┏≫ FOLLOW GROUP RULES</b>\n┣ <b>MAIN CHANNEL›› @Movies_Unloaded2</b></code>\n<b>┗≫ Rules</b>',
-                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️UPDATE CHANNEL⬅️', url='https://t.me/Movies_Unloaded2') ] ] )
+                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ Group Rules ⬅️', url='https://telegra.ph/GROUP-RULES-06-13-5') ] ] )
                 )
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
