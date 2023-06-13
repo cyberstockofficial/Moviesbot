@@ -14,7 +14,7 @@ def is_enabled(value, default):
 
 class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://cyberstockofficial.in')
-    START_TXT = environ.get("START_TXT", "𝙷𝙴𝙻𝙾 {}")
+    START_TXT = environ.get("START_TXT", "Hello Guys I Am Movie X Bot By @Movies_Unloaded2\n\nUse Inline Features of This bot\n\nGive Me Any Movies, Anime, Web Series Name I Will Giev You telegram Files In All Quality! {}")
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙷𝙴𝙻𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """<b>✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}</b>
@@ -40,10 +40,10 @@ Source - Kya Karega Bro Khud bana ek new bot
 2. alert buttons have a limit of 64 characters.
 
 <b>Commands and Usage:</b>
-• /filter - <code>add a filter in chat</code>
-• /filters - <code>list all the filters of a chat</code>
-• /del - <code>delete a specific filter in chat</code>
-• /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
+• <code>/filter</code> - **add a filter in chat**
+• <code>/filters</code> - **list all the filters of a chat**
+• <code>/del</code> - **delete a specific filter in chat**
+• <code>/delall</code> - **delete the whole filters in a chat (chat owner only)**"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
 - Supports both url and alert inline buttons.
@@ -75,42 +75,42 @@ Source - Kya Karega Bro Khud bana ek new bot
 2. Send <code>/connect</code> for connecting me to ur PM
 
 <b>Commands and Usage:</b>
-• /connect  - <code>connect a particular chat to your PM</code>
-• /disconnect  - <code>disconnect from a chat</code>
-• /connections - <code>list all your connections</code>"""
+• <code>/connect</code>  - **connect a particular chat to your PM**
+• <code>/disconnect</code>  - **disconnect from a chat**
+• <code>/connections</code> - **list all your connections**"""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-these are the extra features of ᎯℕUℛᎯᎶ
+these are the extra features Only For Movie X Bot
 
 <b>Commands and Usage:</b>
-• /id - <code>get id of a specified user.</code>
-• /info  - <code>get information about a user.</code>
-• /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>"""
+• <code>/id</code> - **get id of a specified user.**
+• <code>/info</code>  - **get information about a user.**
+• <code>/imdb</code>  - **get the film information from IMDb source.**
+• <code>/search</code>  - **get the film information from various sources.**"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
 This module only works for my admins
 
 <b>Commands and Usage:</b>
-• /logs - <code>to get the rescent errors</code>
-• /stats - <code>to get status of files in db.</code>
-• /delete - <code>to delete a specific file from db.</code>
-• /users - <code>to get list of my users and ids.</code>
-• /chats - <code>to get list of the my chats and ids </code>
-• /leave  - <code>to leave from a chat.</code>
-• /disable  -  <code>do disable a chat.</code>
-• /ban  - <code>to ban a user.</code>
-• /unban  - <code>to unban a user.</code>
-• /channel - <code>to get list of total connected channels</code>
-• /broadcast - <code>to broadcast a message to all users</code>"""
+• <code>/logs</code> - **to get the rescent errors**
+• <code>/stats</code> - **To get status of files in db.**
+• <code>/delete</code> - **to delete a specific file from db.**
+• <code>/users</code> - **to get list of my users and ids.**
+• <code>/chats</code> - **To get list of the my chats and ids**
+• <code>/leave</code>  - **to leave from a chat.**
+• <code>/disable</code>  -  **do disable a chat.**
+• <code>/ban</code> - **to ban a user.**
+• <code>/unban</code> - **to unban a user.**
+• <code>/channel</code> - **to get list of total connected channels**
+• <code>/broadcast</code> - **to broadcast a message to all users**"""
     STATUS_TXT = """
-★**⚡ Total Files**              : <code>{}</code>
-★ <b>🤴 Total Active Users</b>   : <code>{}</code>
-★ <b>💻 Total Active Chats</b>   : <code>{}</code>
-★ <b>🤦‍♂️ Used Database Storage</b>: <code>{}</code>
-★ <b>😊 Free Database Storage</b>: <code>{}</code>\n]n🕊📶 <b>UPTIME</b>: get_readable_time(time.time() - StartTime),"""
+★**⚡ Total Files**     : <code>{}</code>
+★ <b>🤴 Total Users</b> : <code>{}</code>
+★ <b>💻 Total Chats</b> : <code>{}</code>
+★ <b>🤦‍♂️ Used Storage</b>: <code>{}</code>
+★ <b>😊 Free Storage</b>: <code>{}</code>"""
     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
     
 <b>᚛›🤼‍♂️ GROUP        ⪼ {}(<code>{}</code>)</b>
