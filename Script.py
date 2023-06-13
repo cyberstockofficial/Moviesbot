@@ -109,8 +109,8 @@ This module only works for my admins
 ★**⚡ Total Files**              : <code>{}</code>
 ★ <b>🤴 Total Active Users</b>   : <code>{}</code>
 ★ <b>💻 Total Active Chats</b>   : <code>{}</code>
-★ <b>🤦‍♂️ Used Database Storage</b>: <code>{}</code> 𝙼𝚒𝙱
-★ <b>😊 Free Database Storage</b>: <code>{}</code> 𝙼𝚒𝙱"""
+★ <b>🤦‍♂️ Used Database Storage</b>: <code>{}</code>
+★ <b>😊 Free Database Storage</b>: <code>{}</code>\n]n🕊📶 <b>UPTIME</b>: get_readable_time(time.time() - StartTime),"""
     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
     
 <b>᚛›🤼‍♂️ GROUP        ⪼ {}(<code>{}</code>)</b>
