@@ -33,11 +33,11 @@ Source - Kya Karega Bro Khud bana ek new bot
 - <a href=https://t.me/Movies_Unloaded2>@Movies_Unloaded2</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword.
+- <b><u>Filter is the feature were users can set automated replies for a particular keyword.</u></b>
 
 <b>NOTE:</b>
-1. only admins can add filters in a chat.
-2. alert buttons have a limit of 64 characters.
+<i>1. only admins can <b>add filters in a chat.</b>
+2. alert buttons have a limit of <b>64 characters.</b></i>
 
 <b>Commands and Usage:</b>
 • <code>/filter</code> - <b>add a filter in chat</b>
@@ -46,7 +46,7 @@ Source - Kya Karega Bro Khud bana ek new bot
 • <code>/delall</code> - <b>delete the whole filters in a chat (chat owner only)</b>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- Supports both url and alert inline buttons.
+- <b><u>Supports both url and alert inline buttons.</b></u>
 
 <b>NOTE:</b>
 <i>1. Telegram will not allows you to send buttons without any content, so content is mandatory.
@@ -67,15 +67,15 @@ Source - Kya Karega Bro Khud bana ek new bot
  <b>I'll add all the files in that channel to my db.</b>"""
     CONNECTION_TXT = """Help: <b>Connections</b>
 
-- Used to connect bot to PM for managing filters 
-- it helps to avoid spamming in groups.
+- <b><u>Used to connect bot to PM for managing filters.</b></u>
+- <b><u>it helps to avoid spamming in groups.</b></u>
 
 <b>NOTE:</b>
 <i>1. Only admins can add a connection.
 2. Send <code>/connect</code> for connecting me to ur PM</i>
 
 <b>Commands and Usage:</b>
-• <code>/connect</code>  - <b>connect a particular chat to your PM<b>
+• <code>/connect</code>  - <b>connect a particular chat to your PM</b>
 • <code>/disconnect</code>  - <b>disconnect from a chat</b>
 • <code>/connections</code> - <b>list all your connections</b>"""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
