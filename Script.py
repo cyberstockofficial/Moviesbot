@@ -61,50 +61,50 @@ Source - Kya Karega Bro Khud bana ek new bot
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
 
 <b>NOTE:</b>
-<i>1. Make me the admin of your channel if it's private.
-2. make sure that your channel does not contains camrips, porn and fake files.
-3. Forward the last message to me with quotes.</i>
- <b>I'll add all the files in that channel to my db.</b>"""
+<i>1. Make Me The Admin Of Your Channel If It's Private.
+2. Make Sure That Your Channel Does Not Contains Camrips, Porn And Fake Files.
+3. Forward The Last Message To Me With Quotes.</i>
+ <b>I'll Add All The Files In That Channel To My DB.</b>"""
     CONNECTION_TXT = """Help: <b>Connections</b>
 
-- <b><u>Used to connect bot to PM for managing filters.</b></u>
-- <b><u>it helps to avoid spamming in groups.</b></u>
+- <b><u>Used To Connect Bot To PM For Managing Filters.</b></u>
+- <b><u>It Helps To Avoid Spamming In Groups.</b></u>
 
 <b>NOTE:</b>
-<i>1. Only admins can add a connection.
-2. Send <code>/connect</code> for connecting me to ur PM</i>
+<i>1. Only Admins Can Add A Connection.
+2. Send <code>/connect</code> For Connecting Me To Ur PM</i>
 
 <b>Commands and Usage:</b>
-• <code>/connect</code>  - <b>connect a particular chat to your PM</b>
-• <code>/disconnect</code>  - <b>disconnect from a chat</b>
-• <code>/connections</code> - <b>list all your connections</b>"""
+• <code>/connect</code>  - <b>Connect A Particular Chat To Your PM</b>
+• <code>/disconnect</code>  - <b>Disconnect From A Chat</b>
+• <code>/connections</code> - <b>List All Your Connections</b>"""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-<b>these are the extra features Only For Cyber Movie Bot</b>
+<b>These Are The Extra Features Only For Cyber Movie Bot</b>
 
-<b>Commands and Usage:</b>
-• <code>/id</code> - <b>get id of a specified user.</b>
-• <code>/info</code>  - <b>get information about a user.</b>
-• <code>/imdb</code>  - <b>get the film information from IMDb source.</b>
-• <code>/search</code>  - <b>get the film information from various sources.</b>"""
+<b>Commands And Usage:</b>
+• <code>/id</code> - <b>Get Id Of A Specified User.</b>
+• <code>/info</code>  - <b>Get Information About A User.</b>
+• <code>/imdb</code>  - <b>Get The Film Information From IMDb Source.</b>
+• <code>/search</code>  - <b>Get The Film Information From Various Sources.</b>"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
-<b><i>This module only works for my admins</i></b>
+<b><i>This Module Only Works For My Admins</i></b>
 
 <b>Commands and Usage:</b>
-• <code>/logs</code> - <b>to get the rescent errors.</b>
-• <code>/stats</code> - <b>To get status of files in db.</b>
-• <code>/delete</code> - <b>to delete a specific file from db.</b>
-• <code>/users</code> - <b>to get list of my users and ids.</b>
-• <code>/chats</code> - <b>To get list of the my chats and ids</b>
-• <code>/leave</code>  - <b>to leave from a chat.</b>
-• <code>/disable</code>  -  <b>do disable a chat.</b>
-• <code>/ban</code> - <b>to ban a user.</b>
-• <code>/unban</code> - <b>to unban a user.</b>
-• <code>/channel</code> - <b>to get list of total connected channels</b>
-• <code>/broadcast</code> - <b>to broadcast a message to all users</b>"""
+• <code>/logs</code> - <b>To Get The Rescent Errors.</b>
+• <code>/stats</code> - <b>To Get Status Of Files In Database.</b>
+• <code>/delete</code> - <b>To Delete A Specific File From Database.</b>
+• <code>/users</code> - <b>To Get List Of My User's And Ids.</b>
+• <code>/chats</code> - <b>To Get List Of The My Chats And Ids</b>
+• <code>/leave</code>  - <b>To Leave From A Chat.</b>
+• <code>/disable</code>  -  <b>Do Disable A Chat.</b>
+• <code>/ban</code> - <b>To Ban A User.</b>
+• <code>/unban</code> - <b>To Unban A User.</b>
+• <code>/channel</code> - <b>To Get List Of Total Connected Channels</b>
+• <code>/broadcast</code> - <b>To Broadcast A Message To All Users</b>"""
     STATUS_TXT = """
 ★ <b>⚡ Total Files</b> : <code>{}</code>
 ★ <b>🤴 Total Users</b> : <code>{}</code>
