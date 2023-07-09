@@ -14,9 +14,9 @@ def is_enabled(value, default):
 
 class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://cyberstockofficial.in')
-    START_TXT = environ.get("START_TXT", "<b><u>Hello Guys I Am Cyber Movie Bot 😎</b></u>\n\nUse Inline Features of This bot\n\nGive Me Any Movies, Anime, Web Series Name I Will Giev You telegram Files In All Quality! {}")
+    START_TXT = environ.get("START_TXT", "<b><u>Hello {} I Am <u>Cyber Movie Bot</u> 😎</b>\n\n<b>Use Inline Features of This bot\n\n<i>Give Me Any <b>Movies, Anime, Web Series</b> Name I Will Giev You <b>Telegram Files</b> In All Quality!</i>")
     HELP_TXT = """Hey {}
-Here is Your help Guide."""
+<b>Here is Your help Guide.</b>"""
     ABOUT_TXT = """<b>✯ My Name: {}</b>
 <b>✮ Bot Own By: <a href=https://t.me/Movies_Unloaded2></b>
 <b>✮ Liberay: Pyrogram</b>
