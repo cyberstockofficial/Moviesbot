@@ -70,7 +70,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
+        await query.answer("<b><i>You are using one of my old messages, please send the request again.</b></i>", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -87,7 +87,7 @@ async def next_page(bot, query):
             [
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", 
-                    url=await get_shortlink(f"https://t.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
             ]
             for file in files
@@ -97,11 +97,11 @@ async def next_page(bot, query):
             [
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", 
-                    url=await get_shortlink(f"https://t.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", 
-                    url=await get_shortlink(f"https://t.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
             ]
             for file in files
@@ -150,12 +150,12 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("😁 <b>HEY DEAR PLEASE SEARCH YOURSELF</b>", show_alert=True)
+        return await query.answer("😁 <b><i>HEY DEAR PLEASE SEARCH YOURSELF</b></i>", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("<b>LINK EXPIRED OR FILE MAYBE DETELE BY ADMIN</b>", show_alert=True)
+        return await query.answer("<b><u>LINK EXPIRED OR FILE MAYBE DETELE BY ADMIN</u></i>", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('Checking File On My Database.......')
     k = await manual_filters(bot, query.message, text=movie)
@@ -165,7 +165,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('**THIS MOVIE NOT RELEASED OR NOT ADDED IN MY DATABASE\n\nPLEASE REQUEST MOVIES IN OUR SUPPORT @Cyberstock_Support**')
+            k = await query.message.edit('<b><i>This movie not released or not added yet in DB/n/nReport in support group @Cyberstock_support</b></i>')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -190,7 +190,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     return await query.answer('💖 PLEASE SHARE AND SUPPORT US 💖')
             else:
                 await query.message.edit_text(
-                    "I'm not connected to any groups!\nCheck /connections or connect to any groups",
+                    "<b><i>I'm not connected to any groups!\nCheck /connections or connect to any groups</b></i>",
                     quote=True
                 )
                 return await query.answer('💖 PLEASE SHARE AND SUPPORT US 💖')
@@ -206,7 +206,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("You need to be Group Owner or an Auth User to do that!", show_alert=True)
+            await query.answer("<b><u>You need to be Group Owner or an Auth User to do that!</b></u>", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -309,7 +309,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if delcon:
             await query.message.edit_text(
-                "Successfully deleted connection"
+                "<b><i>Successfully deleted connection</b></i>"
             )
         else:
             await query.message.edit_text(
@@ -325,7 +325,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         groupids = await all_connections(str(userid))
         if groupids is None:
             await query.message.edit_text(
-                "There are no active connections!! Connect to some groups first.",
+                "<b><i>There are no active connections!! Connect to some groups first.</b></i>",
             )
             return await query.answer('**💖 PLEASE SHARE AND SUPPORT US 💖**')
         buttons = []
@@ -382,10 +382,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             elif settings['botpm']:
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             else:
                 await client.send_cached_media(
@@ -398,9 +398,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except UserIsBlocked:
             await query.answer('You Are Blocked to use me !', show_alert=True)
         except PeerIdInvalid:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay 😒", show_alert=True)
@@ -434,10 +434,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Group ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Group ➕', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('⚡ UPDATE ⚡', url='https://t.me/cyberstockofficial'),
-            InlineKeyboardButton('🤖 URL SHORTER 🤖', url='https://cyberurl.me')
+            InlineKeyboardButton('🤖 COURSES 🤖', url='https://t.me/cyberstockofficial')
         ], [
             InlineKeyboardButton('♻️ HELP ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ABOUT ♻️', callback_data='about')
@@ -448,7 +448,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('**💖 PLEASE SHARE AND SUPPORT US 💖**')
+        await query.answer('💖 PLEASE SHARE AND SUPPORT US 💖')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('MANUEL FILTER', callback_data='manuelfilter'),
@@ -590,7 +590,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('**💖 PLEASE SHARE AND SUPPORT US 💖**')
+            return await query.answer('💖 PLEASE SHARE AND SUPPORT US 💖')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -637,7 +637,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('**💖 PLEASE SHARE AND SUPPORT US 💖**')
+    await query.answer('💖 PLEASE SHARE AND SUPPORT US 💖')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -740,7 +740,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"**REQUEST MOVIE NAME**: <code>{search}</code>\n\n😌**IF THE MOVIE YOU ARE LOOKING FOR IS NOT AVAILABLE THEN REQUEST IN OUR SUPPORT GROUP @Cyberstock_Support** 😌 \n\n**EXAMPLE**: \n<code>#Request\nMovies Name\nReleased year\nIMDB link</code>"
+        cap = f"<b><i>REQUEST MOVIE NAME: <code>{search}</code>\n\n😌IF THE MOVIE YOU ARE LOOKING FOR IS NOT AVAILABLE THEN REQUEST IN OUR SUPPORT GROUP @Cyberstock_Support 😌 \n\nEXAMPLE:</b></i> \n<code>#Request\nMovies Name\nReleased year\nIMDB link</code>"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -806,8 +806,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling\n\nCopy Spell From www.google.co.in")
-        await asyncio.sleep(8)
+        k = await msg.reply("<b><i>I couldn't find anything related to that. Check your spelling\n\nCopy Spell From www.google.co.in</b></i>")
+        await asyncio.sleep(20)
         await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
@@ -818,7 +818,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("<b><i>I couldn't find anything related to that\nDid you mean any one of these?</b></i>",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
