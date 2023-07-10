@@ -26,7 +26,7 @@ async def save_group(bot, message):
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
-                text='<b>CHAT NOT ALLOWED🐞\n\nMY ADMIN HAS RESTRICT ME FROM WORKING HERE! IF YOU ARE OWNER AND WANT KNOW MORE WHY THEN CONTACT SUPPORT @Cyberstock_Support</b>',
+                text='<b>🔴 <u>CHAT NOT ALLOWED</u> 🔴\n\nMy Admin Has restrict me from working here! I fyou are group owner then you may contact bot owner @Cyberstock_support</b>',
                 reply_markup=reply_markup,
             )
 
@@ -42,7 +42,7 @@ async def save_group(bot, message):
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>››THANKS! {message.chat.title} ❣️\n›› DON'T FORGET TO MAKE ME ADMIN WITHOUT BAN PERMISSION.\n›› ANY DOUBTS? CONTACT SUPPORT GROUP @Cyberstock_Support⚡⚡.</b>",
+            text=f"<b>››THANKS! 😎 {message.chat.title} ❣️\n›› Don't Forget to make me admin.\n›› Any Dount?? Contact support group @Cyberstock_Support 😍⚡</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -55,7 +55,7 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/de227abf4b6e11ac1ce22.mp4",                                               
-                                                 caption=f'<b>HEY, {u.mention} 👋🏻\n** WELCOME TO OUR GROUP {message.chat.title}\n\nYOU CAN SEARCH MOVIES/SERIES/ANIMES ETC... FROM HERE😉.**\n\n<b>┏≫ FOLLOW GROUP RULES</b>\n┣ <b>MAIN CHANNEL›› @Movies_Unloaded2</b></code>\n<b>┗≫ Rules</b>',
+                                                 caption=f'<b>HEY, {u.mention} 👋🏻\nWelcome To {message.chat.title}\n\nYou can search any <u><i>movie, web series, animes etc</i></u>..😍\n\nEverthings 100% Free Of Cost\n\nNO URL SHORTENER\nNO LAG\n┏≫ FOLLOW GROUP RULES\n┣ MAIN CHANNEL›› @Movies_Unloaded2\n┗≫ Rules</b>',
                                                  reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ Group Rules ⬅️', url='https://telegra.ph/GROUP-RULES-06-13-5') ] ] )
                 )
 
@@ -75,7 +75,7 @@ async def leave_a_chat(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group. @Cyberstock_support</b>',
+            text='<b>Hello Friends, \nMy admin has told me to leave from group so i going! If you wanna add me again contact my support group. @Cyberstock_support</b>',
             reply_markup=reply_markup,
         )
 
@@ -114,7 +114,7 @@ async def disable_chat(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
+            text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i going! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
